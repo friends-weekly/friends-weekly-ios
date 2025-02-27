@@ -16,7 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         Style.configure()
         window?.rootViewController = navigator.rootViewController
-        window?.tintColor = .indigo600
         navigator.route(Env.baseURL)
     }
 }
