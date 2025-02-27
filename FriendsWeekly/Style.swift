@@ -10,8 +10,8 @@ import UIKit
 enum Style {
     static func configure() {
         let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.backgroundColor = .white
         navBarAppearance.configureWithOpaqueBackground()
+		navBarAppearance.backgroundColor = .white
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
     }
