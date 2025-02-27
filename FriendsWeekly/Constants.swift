@@ -12,5 +12,5 @@ let localURL = "http://localhost:3000"
 let stuURL = "https://stu.ngrok.io"
 
 enum Env {
-    static let baseURL = URL(string: localURL)! // Change this variable to update local vs prod
+    static let baseURL = URL(string: productionURL)! // Change this variable to update local vs prod
 }

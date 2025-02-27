@@ -19,4 +19,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigator.route(Env.baseURL)
     }
 }
-
