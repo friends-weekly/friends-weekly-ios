@@ -15,7 +15,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		17A441ED2D6FDA43000DA544 /* Exceptions for "FriendsWeekly" folder in "FriendsWeekly" target */ = {
+		456688A22D7004E200ED61B8 /* Exceptions for "FriendsWeekly" folder in "FriendsWeekly" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Supporting Files/Info.plist",
@@ -28,7 +28,7 @@
 		17A441DD2D6FDA42000DA544 /* FriendsWeekly */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				17A441ED2D6FDA43000DA544 /* Exceptions for "FriendsWeekly" folder in "FriendsWeekly" target */,
+				456688A22D7004E200ED61B8 /* Exceptions for "FriendsWeekly" folder in "FriendsWeekly" target */,
 			);
 			path = FriendsWeekly;
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YWKER65N63;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FriendsWeekly/Info.plist;
+				INFOPLIST_FILE = "FriendsWeekly/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Friends Weekly";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -188,7 +188,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YWKER65N63;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FriendsWeekly/Info.plist;
+				INFOPLIST_FILE = "FriendsWeekly/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Friends Weekly";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
