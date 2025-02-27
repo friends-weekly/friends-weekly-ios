@@ -12,8 +12,8 @@ enum Env {
 	static let remotePathConfigURL = baseURL.appending(path: "configurations/ios_v1.json")
 }
 
-extension Env {
-	private static let productionURL = "https://friendsweekly.com"
-	private static let localURL = "http://localhost:3000"
-	private static let stuURL = "https://stu.ngrok.io"
+private extension Env {
+	static let productionURL = "https://friendsweekly.com"
+	static let localURL = "http://localhost:3000"
+	static let stuURL = "https://stu.ngrok.io"
 }
