@@ -13,4 +13,5 @@ let stuURL = "https://stu.ngrok.io"
 
 enum Env {
     static let baseURL = URL(string: productionURL)! // Change this variable to update local vs prod
+	static let remotePathConfigURL = URL(string: "\(baseURL.absoluteString)/configurations/ios_v1.json")!
 }
