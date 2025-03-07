@@ -160,6 +160,7 @@
 				INFOPLIST_FILE = "FriendsWeekly/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Friends Weekly";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos or videos and share directly with your Friends!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -191,6 +192,7 @@
 				INFOPLIST_FILE = "FriendsWeekly/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Friends Weekly";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos or videos and share directly with your Friends!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
