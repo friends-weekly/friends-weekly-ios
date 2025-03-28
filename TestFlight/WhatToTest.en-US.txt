@@ -1,3 +1,19 @@
-Update TestFlight release notes
-Universal Links!
-Add camera permission!
+- Force light mode on viewcontrollers
+ 86cf2f4
+ Friday, March 28, 2025 at 04:30 PM
+
+- Force light mode for navbar
+ 5fbc45e
+ Friday, March 28, 2025 at 04:06 PM
+
+- Make script executable
+ 3cc8cf9
+ Friday, March 28, 2025 at 03:52 PM
+
+- Fix file locations
+ 38a69c5
+ Friday, March 28, 2025 at 03:44 PM
+
+- Auto generate TestFlight release notes on CI
+ 897650d
+ Friday, March 28, 2025 at 03:37 PM
