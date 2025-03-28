@@ -18,7 +18,7 @@ enum Style {
 		let navBarAppearance = UINavigationBarAppearance()
 		navBarAppearance.configureWithOpaqueBackground()
 		/// Force light mode settings, until dark mode support is built on web
-		navBarAppearance.backgroundColor = .white
+		navBarAppearance.backgroundColor = UIColor.lightBackground
 		navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
 		return navBarAppearance
 	}

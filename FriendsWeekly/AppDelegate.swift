@@ -34,5 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			.server(Env.remotePathConfigURL)
 		])
 		Hotwire.config.showDoneButtonOnModals = true
+		Hotwire.config.defaultViewController = { url in
+			FriendsWeeklyWebViewController(url: url)
+		}
 	}
 }
