@@ -9,10 +9,17 @@ import UIKit
 
 enum Style {
     static func configure() {
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.configureWithOpaqueBackground()
-		navBarAppearance.backgroundColor = .white
-        UINavigationBar.appearance().standardAppearance = navBarAppearance
+		let navBarAppearance = lightModeNavBar()
+		UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
     }
+
+	private static func lightModeNavBar() -> UINavigationBarAppearance {
+		let navBarAppearance = UINavigationBarAppearance()
+		navBarAppearance.configureWithOpaqueBackground()
+		/// Force light mode settings, until dark mode support is built on web
+		navBarAppearance.backgroundColor = .white
+		navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+		return navBarAppearance
+	}
 }
