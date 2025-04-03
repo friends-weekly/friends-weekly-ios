@@ -12,8 +12,6 @@
 
 /* Begin PBXFileReference section */
 		17A441DB2D6FDA42000DA544 /* FriendsWeekly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsWeekly.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		452CB0032D97338300C0EE95 /* ci_post_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_xcodebuild.sh; sourceTree = "<group>"; };
-		452CB0052D97338300C0EE95 /* WhatToTest.en-US.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "WhatToTest.en-US.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -35,6 +33,16 @@
 			path = FriendsWeekly;
 			sourceTree = "<group>";
 		};
+		4571EFE12D9F336F00A48A70 /* ci_scripts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
+		4571EFE32D9F337200A48A70 /* TestFlight */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TestFlight;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +60,8 @@
 		17A441D22D6FDA42000DA544 = {
 			isa = PBXGroup;
 			children = (
-				452CB0042D97338300C0EE95 /* ci_scripts */,
-				452CB0062D97338300C0EE95 /* TestFlight */,
+				4571EFE12D9F336F00A48A70 /* ci_scripts */,
+				4571EFE32D9F337200A48A70 /* TestFlight */,
 				17A441DD2D6FDA42000DA544 /* FriendsWeekly */,
 				17A441DC2D6FDA42000DA544 /* Products */,
 			);
@@ -65,22 +73,6 @@
 				17A441DB2D6FDA42000DA544 /* FriendsWeekly.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		452CB0042D97338300C0EE95 /* ci_scripts */ = {
-			isa = PBXGroup;
-			children = (
-				452CB0032D97338300C0EE95 /* ci_post_xcodebuild.sh */,
-			);
-			path = ci_scripts;
-			sourceTree = "<group>";
-		};
-		452CB0062D97338300C0EE95 /* TestFlight */ = {
-			isa = PBXGroup;
-			children = (
-				452CB0052D97338300C0EE95 /* WhatToTest.en-US.txt */,
-			);
-			path = TestFlight;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
