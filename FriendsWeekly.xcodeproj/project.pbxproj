@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		176B496E2D6FDB410017D949 /* HotwireNative in Frameworks */ = {isa = PBXBuildFile; productRef = 176B496D2D6FDB410017D949 /* HotwireNative */; };
+		17FB42ED2E791385003D0564 /* HotwireNative in Frameworks */ = {isa = PBXBuildFile; productRef = 17FB42EC2E791385003D0564 /* HotwireNative */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				176B496E2D6FDB410017D949 /* HotwireNative in Frameworks */,
+				17FB42ED2E791385003D0564 /* HotwireNative in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			);
 			name = FriendsWeekly;
 			packageProductDependencies = (
-				176B496D2D6FDB410017D949 /* HotwireNative */,
+				17FB42EC2E791385003D0564 /* HotwireNative */,
 			);
 			productName = FriendsWeekly;
 			productReference = 17A441DB2D6FDA42000DA544 /* FriendsWeekly.app */;
@@ -126,7 +126,7 @@
 			mainGroup = 17A441D22D6FDA42000DA544;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				176B496C2D6FDB410017D949 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */,
+				17FB42EB2E791385003D0564 /* XCLocalSwiftPackageReference "../hotwire-native-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 17A441DC2D6FDA42000DA544 /* Products */;
@@ -367,21 +367,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		176B496C2D6FDB410017D949 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hotwired/hotwire-native-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.2;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		17FB42EB2E791385003D0564 /* XCLocalSwiftPackageReference "../hotwire-native-ios" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../hotwire-native-ios";
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		176B496D2D6FDB410017D949 /* HotwireNative */ = {
+		17FB42EC2E791385003D0564 /* HotwireNative */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 176B496C2D6FDB410017D949 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */;
 			productName = HotwireNative;
 		};
 /* End XCSwiftPackageProductDependency section */
