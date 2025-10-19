@@ -45,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     /// Hide the launch screen after the delay
     private func hideLaunchScreen(_ launchViewController: LaunchViewController) {
         // Fade out the launch view
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: 0.2, animations: {
             launchViewController.view.alpha = 0
         }) { _ in
             launchViewController.view.removeFromSuperview()
