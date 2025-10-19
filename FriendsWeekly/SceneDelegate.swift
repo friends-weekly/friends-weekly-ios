@@ -18,13 +18,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	/// Called on app launch
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         Style.configure()
+
+        // Set the main app as the root view controller and start loading
         window?.rootViewController = navigator.rootViewController
 
-		if let userActivity = connectionOptions.userActivities.first, let url = getUniversalLink(userActivity) {
-			routeTo(url)
-		} else {
-			routeTo(Env.baseURL)
-		}
+        // Determine the URL to route to
+        if let userActivity = connectionOptions.userActivities.first, let url = getUniversalLink(userActivity) {
+            routeTo(url)
+        } else {
+            routeTo(Env.baseURL)
+        }
+
+        // Add the launch view controller's view on top while content loads
+        let launchViewController = LaunchViewController()
+        launchViewController.onComplete = { [weak self] in
+            self?.hideLaunchScreen(launchViewController)
+        }
+
+        // Add the launch view as a subview covering everything
+        if let rootView = window?.rootViewController?.view {
+            launchViewController.view.frame = rootView.bounds
+            rootView.addSubview(launchViewController.view)
+        }
+    }
+
+    /// Hide the launch screen after the delay
+    private func hideLaunchScreen(_ launchViewController: LaunchViewController) {
+        // Fade out the launch view
+        UIView.animate(withDuration: 0.3, animations: {
+            launchViewController.view.alpha = 0
+        }) { _ in
+            launchViewController.view.removeFromSuperview()
+        }
     }
 
 	/// Called when the app is running
