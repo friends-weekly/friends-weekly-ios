@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1754F8C82EA4809400D3BCB2 /* HotwireNative in Frameworks */ = {isa = PBXBuildFile; productRef = 1754F8C72EA4809400D3BCB2 /* HotwireNative */; };
 		17FB42ED2E791385003D0564 /* HotwireNative in Frameworks */ = {isa = PBXBuildFile; productRef = 17FB42EC2E791385003D0564 /* HotwireNative */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1754F8C82EA4809400D3BCB2 /* HotwireNative in Frameworks */,
 				17FB42ED2E791385003D0564 /* HotwireNative in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +98,7 @@
 			name = FriendsWeekly;
 			packageProductDependencies = (
 				17FB42EC2E791385003D0564 /* HotwireNative */,
+				1754F8C72EA4809400D3BCB2 /* HotwireNative */,
 			);
 			productName = FriendsWeekly;
 			productReference = 17A441DB2D6FDA42000DA544 /* FriendsWeekly.app */;
@@ -126,7 +129,7 @@
 			mainGroup = 17A441D22D6FDA42000DA544;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				17FB42EB2E791385003D0564 /* XCLocalSwiftPackageReference "../hotwire-native-ios" */,
+				1754F8C62EA4809400D3BCB2 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 17A441DC2D6FDA42000DA544 /* Products */;
@@ -367,14 +370,23 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		17FB42EB2E791385003D0564 /* XCLocalSwiftPackageReference "../hotwire-native-ios" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../hotwire-native-ios";
+/* Begin XCRemoteSwiftPackageReference section */
+		1754F8C62EA4809400D3BCB2 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hotwired/hotwire-native-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1754F8C72EA4809400D3BCB2 /* HotwireNative */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1754F8C62EA4809400D3BCB2 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */;
+			productName = HotwireNative;
+		};
 		17FB42EC2E791385003D0564 /* HotwireNative */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = HotwireNative;
