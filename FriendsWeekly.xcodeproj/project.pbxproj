@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1740DF1D2ECEBBCF00CA2051 /* BridgeComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 1740DF1C2ECEBBCF00CA2051 /* BridgeComponents */; };
 		1754F8C82EA4809400D3BCB2 /* HotwireNative in Frameworks */ = {isa = PBXBuildFile; productRef = 1754F8C72EA4809400D3BCB2 /* HotwireNative */; };
 		17FB42ED2E791385003D0564 /* HotwireNative in Frameworks */ = {isa = PBXBuildFile; productRef = 17FB42EC2E791385003D0564 /* HotwireNative */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1740DF1D2ECEBBCF00CA2051 /* BridgeComponents in Frameworks */,
 				1754F8C82EA4809400D3BCB2 /* HotwireNative in Frameworks */,
 				17FB42ED2E791385003D0564 /* HotwireNative in Frameworks */,
 			);
@@ -99,6 +101,7 @@
 			packageProductDependencies = (
 				17FB42EC2E791385003D0564 /* HotwireNative */,
 				1754F8C72EA4809400D3BCB2 /* HotwireNative */,
+				1740DF1C2ECEBBCF00CA2051 /* BridgeComponents */,
 			);
 			productName = FriendsWeekly;
 			productReference = 17A441DB2D6FDA42000DA544 /* FriendsWeekly.app */;
@@ -130,6 +133,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				1754F8C62EA4809400D3BCB2 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */,
+				1740DF1B2ECEBBCF00CA2051 /* XCRemoteSwiftPackageReference "bridge-components" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 17A441DC2D6FDA42000DA544 /* Products */;
@@ -187,7 +191,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.friendsweekly.FriendsWeekly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -221,7 +225,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.friendsweekly.FriendsWeekly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -377,6 +381,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1740DF1B2ECEBBCF00CA2051 /* XCRemoteSwiftPackageReference "bridge-components" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joemasilotti/bridge-components";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.1;
+			};
+		};
 		1754F8C62EA4809400D3BCB2 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hotwired/hotwire-native-ios.git";
@@ -388,6 +400,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1740DF1C2ECEBBCF00CA2051 /* BridgeComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1740DF1B2ECEBBCF00CA2051 /* XCRemoteSwiftPackageReference "bridge-components" */;
+			productName = BridgeComponents;
+		};
 		1754F8C72EA4809400D3BCB2 /* HotwireNative */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1754F8C62EA4809400D3BCB2 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */;
