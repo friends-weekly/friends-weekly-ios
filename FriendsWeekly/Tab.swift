@@ -5,12 +5,12 @@ enum Tab {
     static let all = [
         HotwireTab(
             title: "Mailbox",
-            image: UIImage(systemName: "rectangle.stack")!,
+            image: UIImage(systemName: "envelope.stack")!,
             url: Env.baseURL.appending(path: "newsletters")
         ),
         HotwireTab(
             title: "Post",
-            image: UIImage(systemName: "square.and.pencil")!,
+            image: UIImage(systemName: "plus.app")!,
             url: Env.baseURL
         ),
         HotwireTab(
