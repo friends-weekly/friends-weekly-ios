@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		Hotwire.loadPathConfiguration(from: [
 			.server(Env.remotePathConfigURL)
 		])
-		Hotwire.config.showDoneButtonOnModals = true
+		Hotwire.config.showDoneButtonOnModals = false
 		Hotwire.config.defaultViewController = { url in
 			FriendsWeeklyWebViewController(url: url)
 		}
