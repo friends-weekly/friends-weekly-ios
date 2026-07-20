@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         name: "main",
         startLocation: Env.baseURL
     ))
-    private let tabBarController = HotwireTabBarController()
+    private let tabBarController = HotwireTabBarController(lazyLoadTabs: true)
 
 	/// Called on app launch
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
