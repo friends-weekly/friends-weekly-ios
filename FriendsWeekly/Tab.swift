@@ -10,7 +10,7 @@ enum Tab {
         ),
         HotwireTab(
             title: "Post",
-            image: UIImage(systemName: "plus.app")!,
+            image: UIImage(systemName: "paperplane")!,
             url: Env.baseURL
         ),
         HotwireTab(
