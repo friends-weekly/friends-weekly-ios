@@ -175,7 +175,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FriendsWeekly/Supporting Files/FriendsWeekly.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YWKER65N63;
+				DEVELOPMENT_TEAM = MS35MACJ9M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FriendsWeekly/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Friends Weekly";
@@ -209,7 +209,7 @@
 				CODE_SIGN_ENTITLEMENTS = "FriendsWeekly/Supporting Files/FriendsWeekly.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YWKER65N63;
+				DEVELOPMENT_TEAM = MS35MACJ9M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FriendsWeekly/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Friends Weekly";
