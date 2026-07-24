@@ -8,7 +8,7 @@
 import Foundation
 
 enum Env {
-    static let baseURL = URL(string: localURL)! // Change this variable to update local vs prod
+    static let baseURL = URL(string: productionURL)! // Change this variable to update local vs prod
 	static let remotePathConfigURL = baseURL.appending(path: "configurations/ios_v2.json")
 }
 
