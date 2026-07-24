@@ -14,13 +14,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         name: "main",
         startLocation: Env.baseURL
     ))
+    private let tabBarController = HotwireTabBarController(lazyLoadTabs: true)
 
 	/// Called on app launch
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         Style.configure()
 
-        // Set the main app as the root view controller and start loading
-        window?.rootViewController = navigator.rootViewController
+        // Load tabs, select Post tab, set to root view controller
+        tabBarController.load(Tab.all)
+        tabBarController.selectedIndex = 1
+        window?.rootViewController = tabBarController
 
         // Determine the URL to route to
         if let userActivity = connectionOptions.userActivities.first, let url = getUniversalLink(userActivity) {
@@ -42,6 +45,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
 
+    func signedIn() {
+        if window?.rootViewController == navigator.rootViewController {
+            // Switch to tab bar controller with all tabs
+            tabBarController.load(Tab.all)
+            tabBarController.selectedIndex = 1
+            window?.rootViewController = tabBarController
+        }
+    }
+
+    func signedOut() {
+        // Switch to just the hotwire view (navigator) with no tabs
+        window?.rootViewController = navigator.rootViewController
+    }
+
+	/// Called when the app is running
+	func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+		if let url = getUniversalLink(userActivity) {
+			routeTo(url)
+		}
+	}
+
     /// Hide the launch screen after the delay
     private func hideLaunchScreen(_ launchViewController: LaunchViewController) {
         // Fade out the launch view
@@ -51,13 +75,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             launchViewController.view.removeFromSuperview()
         }
     }
-
-	/// Called when the app is running
-	func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-		if let url = getUniversalLink(userActivity) {
-			routeTo(url)
-		}
-	}
 
 	/// Extract the universal link from the given user activity
 	private func getUniversalLink(_ userActivity: NSUserActivity) -> URL? {

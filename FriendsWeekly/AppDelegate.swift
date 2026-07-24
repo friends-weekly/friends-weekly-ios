@@ -5,6 +5,7 @@
 //  Created by Stuart Yamartino on 2/26/25.
 //
 
+import BridgeComponents
 import HotwireNative
 import UIKit
 
@@ -30,12 +31,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 	private func configureHotwire() {
+//        Hotwire.config.debugLoggingEnabled = true
 		Hotwire.loadPathConfiguration(from: [
 			.server(Env.remotePathConfigURL)
 		])
-		Hotwire.config.showDoneButtonOnModals = true
+		Hotwire.config.showDoneButtonOnModals = false
 		Hotwire.config.defaultViewController = { url in
 			FriendsWeeklyWebViewController(url: url)
 		}
+        Hotwire.registerBridgeComponents([
+          AuthenticationComponent.self
+        ] + Bridgework.coreComponents)
+        if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            Hotwire.config.applicationUserAgentPrefix = "Hotwire Native App iOS/\(appVersion);"
+        }
 	}
 }

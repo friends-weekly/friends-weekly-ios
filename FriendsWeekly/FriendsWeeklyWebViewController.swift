@@ -13,5 +13,18 @@ class FriendsWeeklyWebViewController: HotwireWebViewController {
 		super.viewDidLoad()
 
 		view.backgroundColor = UIColor.lightBackground
+		addCloseButtonToModals()
+	}
+
+	private func addCloseButtonToModals() {
+		guard presentingViewController != nil else { return }
+
+		let action = UIAction { [unowned self] _ in
+			dismiss(animated: true)
+		}
+		navigationItem.rightBarButtonItem = UIBarButtonItem(
+			systemItem: .close,
+			primaryAction: action
+		)
 	}
 }
