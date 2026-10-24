@@ -8,12 +8,24 @@
 import BridgeComponents
 import HotwireNative
 import UIKit
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		configureHotwire()
+        UNUserNotificationCenter.current().delegate = PushNotifications.shared
         return true
+    }
+
+    // MARK: Push Notifications
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        PushNotifications.shared.didRegister(deviceToken: deviceToken)
+    }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        PushNotifications.shared.didFailToRegister(error: error)
     }
 
     // MARK: UISceneSession Lifecycle
@@ -40,7 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			FriendsWeeklyWebViewController(url: url)
 		}
         Hotwire.registerBridgeComponents([
-          AuthenticationComponent.self
+          AuthenticationComponent.self,
+          PushNotificationsComponent.self
         ] + Bridgework.coreComponents)
         if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             Hotwire.config.applicationUserAgentPrefix = "Hotwire Native App iOS/\(appVersion);"

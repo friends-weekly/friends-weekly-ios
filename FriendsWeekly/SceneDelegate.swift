@@ -43,6 +43,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             launchViewController.view.frame = rootView.bounds
             rootView.addSubview(launchViewController.view)
         }
+
+        // Open tapped push notifications (including the one that launched the app)
+        PushNotifications.shared.openURL = { [weak self] url in
+            self?.openNotification(url)
+        }
     }
 
     func signedIn() {
@@ -88,5 +93,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	/// Route to the given URL
 	private func routeTo(_ url: URL) {
 		navigator.route(url)
+	}
+
+	/// Open a tapped notification in whichever navigator is on screen
+	private func openNotification(_ url: URL) {
+		if window?.rootViewController == tabBarController {
+			tabBarController.activeNavigator.route(url)
+		} else {
+			navigator.route(url)
+		}
 	}
 }
