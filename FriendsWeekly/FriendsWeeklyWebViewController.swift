@@ -12,7 +12,7 @@ class FriendsWeeklyWebViewController: HotwireWebViewController {
 	override open func viewDidLoad() {
 		super.viewDidLoad()
 
-		view.backgroundColor = UIColor.lightBackground
+		view.backgroundColor = .systemBackground
 		addCloseButtonToModals()
 	}
 

@@ -18,8 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	/// Called on app launch
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        Style.configure()
-
         // Load tabs, select Post tab, set to root view controller
         tabBarController.load(Tab.all)
         tabBarController.selectedIndex = 1
