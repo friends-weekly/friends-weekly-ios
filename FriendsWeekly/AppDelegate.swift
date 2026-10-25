@@ -53,7 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		}
         Hotwire.registerBridgeComponents([
           AuthenticationComponent.self,
-          PushNotificationsComponent.self
+          PushNotificationsComponent.self,
+          ShareSheetComponent.self
         ] + Bridgework.coreComponents)
         if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             Hotwire.config.applicationUserAgentPrefix = "Hotwire Native App iOS/\(appVersion);"
