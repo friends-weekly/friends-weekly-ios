@@ -53,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		}
         Hotwire.registerBridgeComponents([
           AuthenticationComponent.self,
+          ContactsComponent.self,
           PushNotificationsComponent.self,
           ShareSheetComponent.self
         ] + Bridgework.coreComponents)
